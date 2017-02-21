@@ -17,7 +17,14 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', qa.views.test, name='home'),
-    url(r'^', include('qa.urls')),
+#    url(r'^$', qa.views.test, name='home'),
+#    url(r'^', include('qa.urls')),
+    url(r'^$', views.test, name='popular-q-list'),
+    url(r'^popular/$', views.test, name='popular-q-list'),
+    url(r'^new/$', views.test, name='new-q-list'),
+    url(r'^login/$', views.test, name='login'),
+    url(r'^signup/$', views.test, name='signup'),
+    url(r'^ask/.*$', views.test, name='ask-form'),
+    url(r'^question/(\d+)/$', views.test, name='qa-detail'),
     url(r'^admin/', admin.site.urls),
 ]
