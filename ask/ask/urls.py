@@ -18,7 +18,6 @@ from qa.views import test
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', test, name='home'),
     url(r'^', include('qa.urls')),
     url(r'^admin/', admin.site.urls),
 ]

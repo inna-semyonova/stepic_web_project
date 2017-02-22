@@ -17,7 +17,7 @@ from django.conf.urls import url
 from .views import test
 
 urlpatterns = [
-#    url(r'^$', views.test, name='popular-q-list'),
+    url(r'^$', test, name='home'),
     url(r'^popular/$', test, name='popular-q-list'),
     url(r'^new/$', test, name='new-q-list'),
     url(r'^login/$', test, name='login'),
