@@ -18,10 +18,10 @@ from .views import test
 
 urlpatterns = [
     url(r'^$', test, name='home'),
-    url(r'^popular/$', test, name='popular-q-list'),
-    url(r'^new/$', test, name='new-q-list'),
-    url(r'^login/$', test, name='login'),
-    url(r'^signup/$',test, name='signup'),
+    url(r'^popular/.*$', test, name='popular-q-list'),
+    url(r'^new/.*$', test, name='new-q-list'),
+    url(r'^login/.*$', test, name='login'),
+    url(r'^signup/.*$',test, name='signup'),
     url(r'^ask/.*$', test, name='ask-form'),
-    url(r'^question/(\d+)/$', test, name='qa-detail'),
+    url(r'^question/(\d+)/.*$', test, name='qa-detail'),
 ]
